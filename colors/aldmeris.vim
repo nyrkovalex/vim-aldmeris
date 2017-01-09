@@ -253,7 +253,7 @@ call s:Hi( 'DiffChange',    s:aluminium5,   s:orange1,      "bold" )
 call s:Hi( 'DiffDelete',    s:aluminium5,   s:scarletred2,  "bold" )
 call s:Hi( 'DiffText',      s:aluminium5,   s:skyblue1,     "bold" )
 call s:Hi( 'ErrorMsg',      s:scarletred2,  s:aluminium1 )
-call s:Hi( 'VertSplit',     s:aluminium4,   s:aluminium6,   "bold" )
+call s:Hi( 'VertSplit',     s:black,        s:aluminium5,   "bold" )
 call s:Hi( 'Folded',        s:aluminium6,   s:aluminium3,   "bold,underline" )
 call s:Hi( 'FoldColumn',    s:aluminium3,   s:aluminium5 )
 call s:Hi( 'SignColumn',    s:aluminium3,   s:aluminium5 )
@@ -269,7 +269,7 @@ call s:Hi( 'PmenuSbar',     s:aluminium5,   s:aluminium5 )
 call s:Hi( 'PmenuThumb',    s:aluminium4,   s:aluminium4 )
 call s:Hi( 'Question',      s:aluminium6,   s:chameleon1,   "bold" )
 call s:Hi( 'Search',        s:chameleon3,   s:aluminium1 )
-call s:Hi( 'SpecialKey',    s:aluminium6,   s:aluminium5 )
+call s:Hi( 'SpecialKey',    "NONE",         s:aluminium5 )
     if has("gui_running")
 call s:Hi( 'SpellBad',      s:aluminium6,   "NONE",         "undercurl",   s:scarletred1 )
 call s:Hi( 'SpellCap',      s:aluminium6,   "NONE",         "undercurl",   s:skyblue1 )
@@ -284,8 +284,11 @@ call s:Hi( 'SpellRare',     s:plum2,        "NONE",         "undercurl" )
 call s:Hi( 'StatusLine',    s:aluminium6,   s:aluminium3,   "bold,reverse" )
 call s:Hi( 'StatusLineNC',  s:aluminium4,   s:aluminium6,   "NONE" )
 " TabLine		tab pages line, not active tab page label
+call s:Hi( 'TabLine',       s:aluminium6,  s:aluminium4, "NONE")
 " TabLineFill	tab pages line, where there are no labels
+call s:Hi( 'TabLineFill',   "NONE",         s:aluminium6)
 " TabLineSel	tab pages line, active tab page label
+call s:Hi( 'TabLineSel',    s:aluminium6,   s:aluminium3,   "bold,reverse" )
 call s:Hi( 'Title',         s:aluminium6,   s:butter1,       "bold" )
 call s:Hi( 'Visual',        s:aluminium4,   s:aluminium1 )
 " VisualNOS	Visual mode selection when vim is "Not Owning the Selection".
@@ -343,6 +346,8 @@ hi link jsBraces normal
 hi link jsLabel Identifier
 hi link jsThis Identifier
 hi link jsReturn Statement
+hi link jsFunction Keyword
+hi link jsStorageClass Keyword
 " }}}
 " PHP Colors {{{
 " ----------
@@ -358,18 +363,18 @@ hi link phpNumber Number
 " CSS Colors {{{
 " ----------
 hi link cssIdentifier Normal
-hi link cssClassName Normal
+hi link cssClassName Identifier
 hi link cssTagName Normal
 hi link cssBraces Normal
-hi link cssRenderProp Keyword
-hi link cssBoxProp cssRenderProp
-hi link cssUIProp cssRenderProp
-hi link cssColorProp cssRenderProp
-hi link cssFontProp cssRenderProp
-hi link cssTextProp cssRenderProp
-hi link cssGeneratedContentProp cssRenderProp
+hi link cssProp Keyword
+hi link cssRenderProp cssProp
 hi link cssValueLength Boolean
 hi link cssPseudoClassId Identifier
+hi link cssUnitDecorators SpecialChar
+hi link cssClassName Identifier
+" }}}
+" SCSS Colors {{{
+hi link sassClass cssClassName
 " }}}
 
 " vim: set fdm=marker:
