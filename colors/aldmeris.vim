@@ -377,5 +377,20 @@ hi link cssClassName Identifier
 " SCSS Colors {{{
 hi link sassClass cssClassName
 " }}}
+" ALE {{{
+" ---
+call s:Hi( 'ALEErrorSign',    'NONE',   s:scarletred2 )
+call s:Hi( 'ALEWarningSign',  'NONE',   s:orange2 )
+call s:Hi( 'ALEError',        'NONE',   s:scarletred2 )
+" }}}
+" BufTabLine {{{
+" ----------
+call s:Hi( 'BufTabLineActive',    s:aluminium4,   s:aluminium6 )
+" }}}
+" YCM {{{
+" ---
+hi link YcmErrorSection ALEError
+hi link YcmErrorSign ALEErrorSign
+" }}}
 
 " vim: set fdm=marker:
