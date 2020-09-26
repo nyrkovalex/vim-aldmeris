@@ -257,7 +257,7 @@ call s:Hi( 'ErrorMsg',      s:scarletred2,  s:aluminium1 )
 call s:Hi( 'VertSplit',     "NONE",         s:aluminium5,   "NONE" )
 call s:Hi( 'Folded',        s:aluminium6,   s:aluminium3,   "bold,underline" )
 call s:Hi( 'FoldColumn',    s:aluminium3,   s:aluminium5 )
-call s:Hi( 'SignColumn',    s:aluminium3,   s:aluminium5 )
+call s:Hi( 'SignColumn',    "NONE",   s:aluminium5 )
 " IncSearch	'incsearch' highlighting
 call s:Hi( 'LineNr',        "NONE",         s:aluminium5)
 call s:Hi( 'MatchParen',    s:plum1,        s:aluminium1 )
