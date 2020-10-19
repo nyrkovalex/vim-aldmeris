@@ -277,10 +277,10 @@ call s:Hi( 'SpellCap',      s:aluminium6,   "NONE",         "undercurl",   s:sky
 call s:Hi( 'SpellLocal',    s:aluminium6,   "NONE",         "undercurl",   s:orange1 )
 call s:Hi( 'SpellRare',     s:aluminium6,   "NONE",         "undercurl",   s:plum1 )
     else
-call s:Hi( 'SpellBad',      s:scarletred2,  "NONE",         "undercurl" )
-call s:Hi( 'SpellCap',      s:skyblue2,     "NONE",         "undercurl" )
-call s:Hi( 'SpellLocal',    s:orange2,      "NONE",         "undercurl" )
-call s:Hi( 'SpellRare',     s:plum2,        "NONE",         "undercurl" )
+call s:Hi( 'SpellBad',      "NONE",         s:scarletred2 )
+call s:Hi( 'SpellCap',      "NONE",         s:skyblue2 )
+call s:Hi( 'SpellLocal',    "NONE",         s:orange2 )
+call s:Hi( 'SpellRare',     "NONE",         s:plum2 )
     endif
 call s:Hi( 'StatusLine',    s:aluminium6,   s:aluminium3,   "bold,reverse" )
 call s:Hi( 'StatusLineNC',  s:aluminium4,   s:aluminium6,   "NONE" )
@@ -392,5 +392,4 @@ call s:Hi( 'BufTabLineActive',    s:aluminium4,   s:aluminium6 )
 hi link YcmErrorSection ALEError
 hi link YcmErrorSign ALEErrorSign
 " }}}
-
 " vim: set fdm=marker:
